@@ -88,11 +88,11 @@ section{padding:6rem 2rem}
 /* ─── EXPERIENCE ─── */
 #experience{background:var(--bg)}
 .timeline{position:relative;padding-left:2rem}
-.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border)}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--border))}
 .timeline-item{position:relative;padding-bottom:1rem}
 .timeline-item:last-child{padding-bottom:0}
-.timeline-dot{position:absolute;left:-2.4rem;top:1.1rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--border2);transition:border-color .2s}
-.timeline-item:hover .timeline-dot{border-color:var(--accent)}
+.timeline-dot{position:absolute;left:calc(-2rem - 4px);top:1.1rem;width:10px;height:10px;border-radius:50%;background:var(--accent);border:none;transition:box-shadow .2s,transform .2s}
+.timeline-item:hover .timeline-dot{box-shadow:0 0 0 4px rgba(79,142,247,0.2);transform:scale(1.2)}
 .timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:0.75rem;overflow:hidden;transition:border-color .2s}
 .timeline-card:hover{border-color:var(--border2)}
 /* Card main row: left text + right image always visible */
@@ -261,8 +261,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   nav.nav-open .nav-links{display:flex}
   /* Hero */
   #hero{padding:5rem 1.5rem 2rem;align-items:flex-start}
-  .hero-intro{flex-direction:column;gap:1.25rem;margin-bottom:0;padding-bottom:1.5rem;align-items:center;text-align:center}
-  .hero-tag{margin-top:1.5rem}
+  .hero-intro{flex-direction:column;gap:1.25rem;margin-bottom:0;padding-bottom:0;border-bottom:none;align-items:center;text-align:center}
+  .hero-tag{margin-top:0.75rem}
   .hero-ctas{flex-wrap:nowrap}
   .btn-primary,.btn-ghost{padding:0.65rem 1.1rem;font-size:0.85rem}
   .hero-portrait{width:144px;order:-1}
@@ -270,9 +270,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   h1.hero-name{font-size:clamp(2.2rem,9vw,3.5rem);white-space:nowrap}
   .hero-name br{display:none}
   .hero-title{max-width:100%;font-size:1rem}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
-  .stat-num{font-size:1.5rem}
-  .stat-label{font-size:0.7rem}
   /* Sections */
   section{padding:4rem 1.5rem}
   /* About */
@@ -282,7 +279,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   .about-links{flex:1}
   /* Timeline */
   .timeline{padding-left:1.25rem}
-  .timeline-dot{left:-1.4rem;top:1rem}
+  .timeline-dot{left:calc(-1.25rem - 4px);top:1rem}
   .timeline-card-left{padding:0.85rem 1rem}
   .timeline-card-right{width:108px;padding:0.5rem}
   .timeline-details{padding:0.85rem 1rem}
@@ -305,6 +302,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   .blog-categories{display:grid;grid-template-columns:1fr 1fr;gap:0.4rem}
   .blog-cat-btn{font-size:0.8rem;padding:0.4rem 0.8rem;text-align:center}
   .blog-panel{padding:1.5rem}
+}
+
+@media(max-width:538px){
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
+  .hero-stats .stat-item:nth-child(even){text-align:right}
+  .stat-num{font-size:1.5rem}
+  .stat-label{font-size:0.7rem}
 }
 
 @media(max-width:480px){
