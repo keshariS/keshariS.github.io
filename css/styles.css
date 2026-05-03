@@ -260,14 +260,19 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
   .nav-links li a{display:block;padding:0.8rem 2rem;font-size:0.9rem}
   nav.nav-open .nav-links{display:flex}
   /* Hero */
-  #hero{padding:0 1.5rem}
-  .hero-intro{flex-direction:column;gap:1.25rem;margin-bottom:1.5rem;padding-bottom:1.5rem;align-items:center;text-align:center}
+  #hero{padding:5rem 1.5rem 2rem;align-items:flex-start}
+  .hero-intro{flex-direction:column;gap:1.25rem;margin-bottom:0;padding-bottom:1.5rem;align-items:center;text-align:center}
+  .hero-tag{margin-top:1.5rem}
+  .hero-ctas{flex-wrap:nowrap}
+  .btn-primary,.btn-ghost{padding:0.65rem 1.1rem;font-size:0.85rem}
   .hero-portrait{width:144px;order:-1}
   .hero-intro-text{text-align:center}
   h1.hero-name{font-size:clamp(2.2rem,9vw,3.5rem);white-space:nowrap}
   .hero-name br{display:none}
   .hero-title{max-width:100%;font-size:1rem}
-  .hero-stats{gap:1.5rem}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
+  .stat-num{font-size:1.5rem}
+  .stat-label{font-size:0.7rem}
   /* Sections */
   section{padding:4rem 1.5rem}
   /* About */
@@ -304,6 +309,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 2r
 
 @media(max-width:480px){
   .projects-grid-sq{grid-template-columns:repeat(2,1fr)}
-  .hero-stats{gap:1rem}
+  .hero-stats{gap:0.75rem 1.25rem}
   .hero-portrait{width:130px}
 }
