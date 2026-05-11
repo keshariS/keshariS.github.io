@@ -1,6 +1,13 @@
 const worksData = {
   projects: [
     {
+      title: "Humanity & Kardashev 1",
+      description: "Tracking humanity's race to becoming a Type 1 Kardashev civilization",
+      image: "images/projects/k1.png",
+      github: "https://kesharis.github.io/kardashev1/",
+      label: "Web Project"
+    },
+    {
       title: "Charger Design for Light EVs",
       description: "AC charger with interleaved boost PFC + PSFB topology. Fabricated and tested in hardware. Won the Systems Society Award for Best Thesis.",
       image: "images/projects/p1.jpg",
